@@ -24,8 +24,19 @@ autonomous-path-planning/
 │   └── README.md
 │
 ├── python_dwa/                 # Python Dynamic Window Approach
+│   ├── src/                    # Modular Python implementation
+│   │   ├── robot.py            # Differential drive kinematics
+│   │   ├── environment.py      # Obstacle management
+│   │   ├── dwa_planner.py      # DWA algorithm
+│   │   ├── visualizer.py       # Pygame visualization
+│   │   ├── config_loader.py    # YAML config loading
+│   │   ├── main.py             # Entry point
+│   │   └── DDWA.py             # Original implementation (reference)
 │   ├── configs/                # DWA parameters
+│   │   └── dwa.yaml
 │   ├── outputs/                # Simulation GIF
+│   │   └── simulation.gif
+│   ├── requirements.txt
 │   └── README.md
 │
 ├── cuda_dwa/                   # GPU-Accelerated DWA (30-50x speedup)
@@ -44,6 +55,7 @@ autonomous-path-planning/
 │   └── README.md
 │
 ├── README.md                   # This file
+├── LICENSE                     # Custom non-commercial license
 └── .gitignore
 ```
 
