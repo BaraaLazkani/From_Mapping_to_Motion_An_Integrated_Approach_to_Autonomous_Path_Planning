@@ -1,0 +1,13 @@
+# Python DWA Dependencies
+
+# Visualization
+pygame>=2.0.0
+
+# Image processing for GIF recording
+Pillow>=9.0.0
+
+# Scientific computing
+numpy>=1.21.0
+
+# Configuration (optional, for YAML config loader)
+PyYAML>=6.0

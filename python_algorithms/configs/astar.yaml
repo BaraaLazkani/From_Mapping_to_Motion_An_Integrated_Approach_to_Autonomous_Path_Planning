@@ -1,0 +1,34 @@
+# A* Algorithm Configuration
+# A* uses a heuristic-guided search to find optimal paths
+
+algorithm:
+  name: "astar"
+
+  # Algorithm parameters
+  parameters:
+    # Heuristic function type
+    # Options: 'euclidean', 'manhattan', 'diagonal'
+    heuristic_type: "euclidean"
+
+    # Heuristic weight (1.0 = optimal A*, >1.0 = weighted A* for faster search)
+    heuristic_weight: 1.0
+
+    # Whether to include obstacle corners in visibility graph
+    include_obstacle_corners: true
+
+  # Trajectory smoothing using Cubic Spline Curve (CSC)
+  trajectory:
+    enabled: true
+    radius: 1.0          # Robot turning radius (meters)
+    robot_width: 0.5     # Robot width (meters)
+    segments_per_edge: 30  # Time steps per path segment (0-30)
+
+  # Output settings
+  output:
+    save_path: "outputs/astar/"
+    save_animation: true
+    animation_filename: "star_algorithm.gif"
+    animation_fps: 5
+    animation_interval: 50  # milliseconds between frames
+    save_static_plot: true
+    plot_filename: "path_plot.png"

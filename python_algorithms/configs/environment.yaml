@@ -1,0 +1,35 @@
+# Environment configuration for path planning algorithms
+# This file defines the map size, start/goal positions, and obstacles
+
+environment:
+  # Map boundaries (width x height in environment units)
+  map_size:
+    width: 20.0
+    height: 20.0
+
+  # Starting position (x, y)
+  start_point:
+    x: 8.0
+    y: 1.0
+
+  # Goal position (x, y)
+  goal_point:
+    x: 18.0
+    y: 18.0
+
+  # List of rectangular obstacles
+  # Each obstacle has a center point and dimensions (width x height)
+  obstacles:
+    - center: [5.0, 5.0]
+      size: [2.0, 2.0]
+
+    - center: [12.0, 12.0]
+      size: [3.0, 3.0]
+
+    - center: [15.0, 5.0]
+      size: [2.0, 1.0]
+
+  # Visualization settings
+  visualization:
+    figure_size: [10, 6]
+    dpi: 100

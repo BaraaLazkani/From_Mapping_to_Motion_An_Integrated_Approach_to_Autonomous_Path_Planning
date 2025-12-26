@@ -1,0 +1,32 @@
+# Scoring Configuration for CUDA DWA
+# Defines trajectory evaluation weights and scoring function
+
+scoring:
+  # Trajectory Scoring Weights
+  # These weights determine which trajectories are preferred
+  # Total weight should sum to 1.0 for interpretability
+
+  speed_weight: 0.3      # Weight for forward velocity component (30%)
+                         # Higher → prefers faster trajectories
+                         # Formula: (velocity / max_speed) * speed_weight
+
+  heading_weight: 0.7    # Weight for goal-directed motion (70%)
+                         # Higher → prefers trajectories toward goal
+                         # Formula: (1 - distance_to_goal / max_distance) * heading_weight
+
+  # Scoring Function Breakdown:
+  # score = speed_component + heading_component
+  #       = (v / v_max) * 0.3 + (1 - dist/100) * 0.7
+  #
+  # Where:
+  # - v: trajectory velocity
+  # - v_max: maximum velocity (from robot.yaml)
+  # - dist: final distance to goal after simulation
+  # - 100: normalization factor (approximate max expected distance)
+  #
+  # Collision Handling:
+  # - If trajectory collides with obstacle → score = -∞ (rejected)
+
+  # Alternative Scoring Components (Future Extensions):
+  # obstacle_clearance_weight: 0.1  # Prefer trajectories far from obstacles
+  # smoothness_weight: 0.05         # Prefer smooth velocity changes

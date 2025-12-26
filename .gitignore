@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# CUDA/C++
+*.o
+*.out
+*.so
+*.a
+cuda_dwa/bin/
+*.exe
+
+# Webots
+*.wbproj
+cspace.npy
+*.pyc
+
+# macOS
+.DS_Store
+
+# Output files (optional - uncomment if you don't want to track outputs)
+# *.gif
+# *.mp4
+# *.png
+# outputs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Internal documentation
+CLAUDE.md
+.claude/

@@ -1,0 +1,16 @@
+# Robot Configuration for CUDA DWA
+# Defines robot kinematic limits and initial pose
+
+robot:
+  # Kinematic Constraints
+  max_linear_velocity: 2.0      # Maximum forward velocity (m/s)
+  max_angular_velocity: 3.14159 # Maximum rotation rate (rad/s) = π
+
+  # Initial Pose (Start Position)
+  initial_pose:
+    x: 10.0      # Initial X position (meters)
+    y: 10.0      # Initial Y position (meters)
+    theta: 0.0   # Initial heading angle (radians, 0 = facing East)
+
+  # Robot Physical Parameters (Optional, for future collision checking)
+  # footprint_radius: 0.3  # Robot radius for circular approximation (meters)

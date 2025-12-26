@@ -1,0 +1,47 @@
+# Python DWA Configuration
+# Dynamic Window Approach parameters for differential drive robot
+
+robot:
+  radius: 0.10              # Robot radius (meters)
+  wheel_width: 0.20         # Distance between wheels (meters)
+  max_velocity: 0.3         # Maximum wheel velocity (m/s)
+  max_acceleration: 0.5     # Maximum acceleration (m/s²)
+  safe_distance: 0.10       # Minimum safe distance from obstacles (meters)
+
+planning:
+  timestep: 0.1             # Simulation timestep (seconds)
+  steps_ahead: 10           # Planning horizon in steps
+  tau: 1.0                  # Total planning time = timestep * steps_ahead
+
+  # Scoring weights
+  forward_weight: 12        # Weight for forward progress toward goal
+  obstacle_weight: 6666     # Penalty weight for proximity to obstacles
+
+environment:
+  playfield:
+    x_min: -4.0
+    x_max: 4.0
+    y_min: -3.0
+    y_max: 3.0
+
+  obstacles:
+    barrier_radius: 0.1
+    num_dynamic: 35         # Number of randomly moving obstacles
+    velocity_range: 0.1     # Max obstacle velocity (m/s)
+
+    # Static obstacles (large circular regions)
+    static:
+      - x: -2.0
+        y: 1.0
+      - x: 2.0
+        y: 1.0
+      - x: 0.0
+        y: 2.0
+
+visualization:
+  width: 1500
+  height: 1000
+  scale: 160                # Pixels per meter
+  record_gif: true
+  gif_duration: 15          # seconds
+  frame_skip: 5             # Only capture every Nth frame

@@ -1,0 +1,17 @@
+# Python Path Planning Algorithms - Dependencies
+
+# Core scientific computing
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Visualization
+matplotlib>=3.5.0
+
+# Configuration
+PyYAML>=6.0
+
+# Animation
+Pillow>=9.0.0
+
+# Optional: For better performance
+# numba>=0.55.0

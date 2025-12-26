@@ -1,0 +1,27 @@
+# Dijkstra's Algorithm Configuration
+# Dijkstra finds the shortest path without using a heuristic
+
+algorithm:
+  name: "dijkstra"
+
+  # Algorithm parameters
+  parameters:
+    # Whether to include obstacle corners in visibility graph
+    include_obstacle_corners: true
+
+  # Trajectory smoothing using Cubic Spline Curve (CSC)
+  trajectory:
+    enabled: true
+    radius: 1.0
+    robot_width: 0.5
+    segments_per_edge: 30
+
+  # Output settings
+  output:
+    save_path: "outputs/dijkstra/"
+    save_animation: true
+    animation_filename: "dijkstra_algorithm.gif"
+    animation_fps: 5
+    animation_interval: 50
+    save_static_plot: true
+    plot_filename: "path_plot.png"

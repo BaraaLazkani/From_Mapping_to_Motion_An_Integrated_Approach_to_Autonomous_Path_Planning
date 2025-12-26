@@ -1,0 +1,21 @@
+# Simulation Configuration for CUDA DWA
+# Defines trajectory simulation and sampling parameters
+
+simulation:
+  # Trajectory Simulation
+  dt: 0.1          # Time step for forward simulation (seconds)
+  sim_time: 3.0    # Total simulation horizon (seconds)
+                   # Each trajectory simulates 3.0/0.1 = 30 steps
+
+  # Sampling Parameters
+  num_samples: 10240  # Number of (velocity, omega) pairs to evaluate
+                      # Trade-off: More samples → better control, slower computation
+                      # 10240 chosen for GPU efficiency (divisible by 256, 512, 1024)
+
+  # CUDA Execution Parameters
+  cuda:
+    block_size: 256  # Threads per block (CUDA block dimension)
+                     # 256 is optimal for most GPUs (allows full warp utilization)
+
+    # Grid size computed as: (num_samples + block_size - 1) / block_size
+    # For 10240 samples: (10240 + 256 - 1) / 256 = 40 blocks

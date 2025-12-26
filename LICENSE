@@ -1,0 +1,111 @@
+Custom Non-Commercial License
+
+Copyright (c) 2024 Baraa Lazkani, Modar Ibrahim, and Laith Alsheikh
+All rights reserved.
+
+================================================================================
+
+TERMS AND CONDITIONS
+
+1. DEFINITIONS
+
+   "Software" refers to the code, documentation, algorithms, demonstrations,
+   and all other materials in this repository.
+
+   "Authors" refers collectively to Baraa Lazkani, Modar Ibrahim, and
+   Laith Alsheikh, who contributed equally to this work.
+
+   "Non-Commercial Use" means use that is not primarily intended for or
+   directed toward commercial advantage or monetary compensation.
+
+   "Commercial Use" means any use primarily intended for or directed toward
+   commercial advantage or monetary compensation, including but not limited to:
+   - Integration into commercial products or services
+   - Use in a commercial organization's products
+   - Use that generates revenue or commercial benefit
+
+2. GRANT OF LICENSE
+
+   Subject to the terms and conditions of this License, the Authors hereby
+   grant you a worldwide, royalty-free, non-exclusive license to use, copy,
+   modify, and distribute the Software for Non-Commercial Use only.
+
+3. NON-COMMERCIAL USE
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this Software to use, copy, modify, and distribute the Software
+   for academic research, educational, or other non-commercial purposes,
+   subject to the following conditions:
+
+   a) The above copyright notice and this permission notice shall be included
+      in all copies or substantial portions of the Software.
+
+   b) Any use of the Software must include a citation to this repository as
+      specified in the README.md file.
+
+   c) Modifications and derivative works must clearly indicate that changes
+      were made from the original Software.
+
+4. COMMERCIAL USE RESTRICTIONS
+
+   Commercial Use of this Software is strictly prohibited without prior
+   written approval from ALL AUTHORS.
+
+   To request permission for Commercial Use:
+   - Contact ALL authors listed in the README.md file
+   - Obtain written approval from ALL authors
+   - Agree to terms negotiated with the authors
+
+   Commercial Use without such approval is a violation of this License and
+   may result in legal action.
+
+5. CITATION REQUIREMENT
+
+   ALL uses of this Software, whether commercial or non-commercial, must
+   include a citation to this repository. The required citation format is
+   provided in the README.md file.
+
+   Failure to provide proper citation is a violation of this License.
+
+6. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+7. TERMINATION
+
+   This License and the rights granted hereunder will terminate automatically
+   upon any breach by you of the terms of this License. Upon termination, you
+   must cease all use of the Software and destroy all copies.
+
+8. JURISDICTION
+
+   This License shall be governed by and construed in accordance with
+   applicable copyright laws.
+
+================================================================================
+
+For questions regarding this License or to request Commercial Use permission,
+please contact:
+
+Baraa Lazkani: lazkani.baraa.official@gmail.com
+
+All three authors must approve any Commercial Use of this Software.
+
+================================================================================
+
+REQUIRED CITATION:
+
+@misc{lazkani2024autonomous,
+  title={From Mapping to Motion: An Integrated Approach to Autonomous Path Planning},
+  author={Lazkani, Baraa and Ibrahim, Modar and Alsheikh, Laith},
+  year={2024},
+  publisher={GitHub},
+  url={https://github.com/BaraaLazkani/From_Mapping_to_Motion_An_Integrated_Approach_to_Autonomous_Path_Planning},
+  note={Comprehensive implementation of path planning algorithms with GPU acceleration. All authors contributed equally.}
+}

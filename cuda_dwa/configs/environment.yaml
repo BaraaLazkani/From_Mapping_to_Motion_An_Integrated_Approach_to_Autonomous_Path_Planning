@@ -1,0 +1,21 @@
+# Environment Configuration for CUDA DWA
+# Defines occupancy grid map parameters and goal position
+
+environment:
+  # Occupancy Grid Map
+  map:
+    width: 1024           # Map width in cells (pixels)
+    height: 1024          # Map height in cells (pixels)
+    resolution: 0.1       # Meters per cell (0.1m = 10cm per pixel)
+
+    # Map size in meters:
+    # - Width: 1024 * 0.1 = 102.4 meters
+    # - Height: 1024 * 0.1 = 102.4 meters
+
+    # Obstacle Generation (for testing/simulation)
+    obstacle_density: 0.05  # Fraction of cells with obstacles (5%)
+
+  # Goal Position
+  goal:
+    x: 90.0  # Goal X position (meters)
+    y: 90.0  # Goal Y position (meters)

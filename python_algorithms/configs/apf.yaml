@@ -1,0 +1,41 @@
+# Artificial Potential Field (APF) Algorithm Configuration
+# APF uses attractive and repulsive forces to navigate to the goal
+
+algorithm:
+  name: "apf"
+
+  parameters:
+    # Attractive potential parameters
+    zeta: 1.1547                # Attractive force gain
+    dstar: 0.3                  # Distance threshold for parabolic well (meters)
+
+    # Repulsive potential parameters
+    eta: 0.0732                 # Repulsive force gain
+    Qstar: 0.75                 # Influence distance of obstacles (meters)
+
+    # Robot kinematic constraints
+    max_linear_velocity: 0.2    # Maximum linear velocity (m/s)
+    max_angular_velocity: 1.5708  # Maximum angular velocity (rad/s, π/2)
+
+    # Control parameters
+    Kp_omega: 1.5               # Proportional gain for angular velocity control
+    error_theta_max: 0.7854     # Max orientation error to allow motion (rad, 45°)
+
+    # Simulation parameters
+    dt: 0.1                     # Time step (seconds)
+    max_time: 1000              # Maximum simulation time steps
+    position_accuracy: 0.05     # Goal reached threshold (meters)
+
+    # Obstacle representation
+    # Number of points to discretize each obstacle edge for force calculation
+    obstacle_points_per_edge: 100
+
+  # Output settings
+  output:
+    save_path: "outputs/apf/"
+    save_animation: true
+    animation_filename: "apf_simulation.gif"
+    animation_fps: 20
+    animation_interval: 50
+    save_trajectory_plot: true
+    trajectory_filename: "trajectory.png"

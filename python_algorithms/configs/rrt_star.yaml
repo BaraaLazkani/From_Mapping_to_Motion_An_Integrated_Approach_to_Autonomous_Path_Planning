@@ -1,0 +1,45 @@
+# RRT* (Rapidly-exploring Random Tree Star) Algorithm Configuration
+# RRT* is a sampling-based planner with asymptotic optimality
+
+algorithm:
+  name: "rrt_star"
+
+  parameters:
+    # Sampling parameters
+    step_size: 0.5              # Maximum edge length for extending tree
+    max_iterations: 500         # Maximum number of samples to generate
+    goal_sample_rate: 0.2       # Probability of sampling goal (0.0-1.0)
+
+    # RRT* specific parameters
+    rewire_radius: 2.0          # Radius for searching neighbors to rewire
+    goal_tolerance: 1.0         # Distance threshold to consider goal reached
+
+    # Random seed for reproducibility
+    # Set to null for random seed, or specify an integer for deterministic behavior
+    random_seed: null
+
+  # Visualization parameters
+  visualization:
+    show_tree: true
+    tree_color: "blue"
+    tree_linewidth: 0.5
+    path_color: "green"
+    path_linewidth: 2.0
+    tree_alpha: 0.3             # Transparency of tree edges
+
+  # Output settings
+  output:
+    save_path: "outputs/rrt_star/"
+
+    # Tree expansion animation
+    save_tree_animation: true
+    tree_animation_filename: "tree_expansion_with_rewire.gif"
+    tree_animation_fps: 10
+
+    # Robot simulation animation
+    save_robot_animation: true
+    robot_animation_filename: "robot_simulation.gif"
+    robot_animation_fps: 10
+
+    save_static_plot: true
+    plot_filename: "final_path.png"
